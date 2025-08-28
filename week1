@@ -1,0 +1,198 @@
+<!-- CSS Styles -->
+<style>
+    /* General Body & Typography */
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+        scroll-behavior: smooth; /* Enables smooth scrolling for the whole page */
+    }
+
+    .container {
+        max-width: 960px;
+        margin: auto;
+        overflow: hidden;
+        padding: 0 20px;
+    }
+
+    h1, h2, h3 {
+        color: #333;
+    }
+
+    /* Header & Navigation */
+    header {
+        background: #333;
+        color: #fff;
+        padding: 1.5rem 0;
+        text-align: center;
+        border-bottom: 3px solid #007BFF;
+    }
+
+    header h1 {
+        margin: 0;
+        color: #fff;
+        font-size: 2.5rem;
+    }
+
+    header p {
+        margin: 0;
+        font-size: 1.2rem;
+        color: #ccc;
+    }
+
+    nav {
+        background: #444;
+        padding: 0.5rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav ul {
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        margin: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    
+    nav a:hover {
+        color: #007BFF;
+    }
+
+    /* Main Content Sections */
+    main {
+        padding: 20px 0;
+    }
+
+    section {
+        background: #fff;
+        margin-bottom: 20px;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* About Me Section */
+    #about {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #about .bio {
+        flex: 2;
+    }
+
+    #about figure {
+        flex: 1;
+        margin: 0;
+        text-align: center;
+    }
+
+    #about figure img {
+        max-width: 200px;
+        border-radius: 50%;
+        border: 5px solid #ddd;
+    }
+
+    #about figure figcaption {
+        font-style: italic;
+        color: #666;
+        margin-top: 10px;
+    }
+
+    /* Skills Section */
+    #skills ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #skills li {
+        background: #007BFF;
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    
+    /* Contact Section */
+    #contact a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    #contact a:hover {
+        text-decoration: underline;
+    }
+
+    /* Timetable Section & Table Styling */
+    #timetable h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 12px;
+    }
+
+    thead {
+        background-color: #333;
+        color: #fff;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    tfoot {
+        font-weight: bold;
+        text-align: center;
+        background-color: #f2f2f2;
+    }
+    
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #333;
+        color: #fff;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        #about {
+            flex-direction: column;
+        }
+    }
+</style>
