@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<company>
+    <header id="main-header">
+        <title>About Our Company</title>
+        <tagline>Innovation • Creativity • Growth</tagline>
+    </header>
+
+    <about info="team">
+        <heading>Who We Are</heading>
+        <description>We are a leading tech company focused on building web and AI solutions.</description>
+    </about>
+
+    <about info="mission">
+        <heading>Our Mission</heading>
+        <description>To simplify technology and empower people with smart solutions.</description>
+    </about>
+
+    <movies>
+        <movie>Inception</movie>
+        <movie favorite="yes">Interstellar</movie>
+        <movie>The Dark Knight</movie>
+        <movie>Avengers: Endgame</movie>
+    </movies>
+
+    <cities>
+        <city>Tokyo</city>
+        <city>Paris</city>
+        <city>New York</city>
+        <city>Dubai</city>
+    </cities>
+</company>
