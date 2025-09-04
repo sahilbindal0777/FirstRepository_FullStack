@@ -1,32 +1,111 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 2 – CSS Selectors & Lists</title>
+  <style>
+    /* ===== Global Styles (Element Selector + HEX + RGB) ===== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4; /* HEX */
+      color: rgb(50, 50, 50);   /* RGB */
+    }
 
-<company>
-    <header id="main-header">
-        <title>About Our Company</title>
-        <tagline>Innovation • Creativity • Growth</tagline>
-    </header>
+    /* ===== ID Selector ===== */
+    #main-header {
+      background-color: hsl(200, 80%, 40%); /* HSL */
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
 
-    <about info="team">
-        <heading>Who We Are</heading>
-        <description>We are a leading tech company focused on building web and AI solutions.</description>
-    </about>
+    /* ===== Class Selector + RGBA ===== */
+    .tagline {
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.8); /* RGBA */
+    }
 
-    <about info="mission">
-        <heading>Our Mission</heading>
-        <description>To simplify technology and empower people with smart solutions.</description>
-    </about>
+    /* ===== Attribute Selector ===== */
+    section[data-info="mission"] {
+      border-left: 5px solid #e67e22;
+      padding-left: 10px;
+    }
 
-    <movies>
-        <movie>Inception</movie>
-        <movie favorite="yes">Interstellar</movie>
-        <movie>The Dark Knight</movie>
-        <movie>Avengers: Endgame</movie>
-    </movies>
+    /* ===== Pseudo-class Selector ===== */
+    ul.movies li:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+    }
 
-    <cities>
-        <city>Tokyo</city>
-        <city>Paris</city>
-        <city>New York</city>
-        <city>Dubai</city>
-    </cities>
-</company>
+    /* ===== Pseudo-element Selector ===== */
+    h2::after {
+      content: " ✨";
+      color: #e67e22;
+    }
+
+    /* ===== Task 4: Unordered List ===== */
+    .movies {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    .movies .favorite {
+      font-weight: bold;
+      color: hsl(340, 80%, 40%);
+      text-decoration: underline;
+    }
+
+    /* ===== Task 5: Ordered List ===== */
+    .cities {
+      list-style-type: decimal-leading-zero;
+      padding-left: 20px;
+    }
+    .cities li {
+      margin: 5px 0;
+      padding: 5px;
+      border-radius: 6px;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Task 3: About Us Page with Selectors ===== -->
+  <header id="main-header">
+    <h1>About Our Company</h1>
+    <p class="tagline">Innovation • Creativity • Growth</p>
+  </header>
+
+  <section class="about" data-info="team">
+    <h2>Who We Are</h2>
+    <p>We are a leading tech company focused on building web and AI solutions.</p>
+  </section>
+
+  <section class="about" data-info="mission">
+    <h2>Our Mission</h2>
+    <p>To simplify technology and empower people with smart solutions.</p>
+  </section>
+
+  <hr>
+
+  <!-- ===== Task 4: Unordered List of Movies ===== -->
+  <h2>My Favorite Movies</h2>
+  <ul class="movies">
+    <li>Inception</li>
+    <li class="favorite">Interstellar</li>
+    <li>The Dark Knight</li>
+    <li>Avengers: Endgame</li>
+  </ul>
+
+  <!-- ===== Task 5: Ordered List of Cities ===== -->
+  <h2>Cities I Want to Visit</h2>
+  <ol class="cities">
+    <li>Tokyo</li>
+    <li>Paris</li>
+    <li>New York</li>
+    <li>Dubai</li>
+  </ol>
+</body>
+</html>
+
