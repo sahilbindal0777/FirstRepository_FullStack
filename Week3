@@ -1,37 +1,186 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 3 – Layouts</title>
+  <style>
+    /* ===== Reset & Global Styles ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      color: #333;
+      padding: 20px;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
 
-<week3>
-    <sidebar>
-        <title>Menu</title>
-        <items>
-            <item>Home</item>
-            <item>Products</item>
-            <item>Services</item>
-            <item>Contact</item>
-        </items>
-    </sidebar>
+    /* ===== Task 6: Sidebar ===== */
+    .container {
+      display: flex;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .sidebar {
+      width: 250px;
+      background: #2c3e50;
+      color: #fff;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    .sidebar ul {
+      list-style: none;
+    }
+    .sidebar li {
+      margin: 15px 0;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
 
-    <productCard>
-        <product>
-            <name>Wireless Headphones</name>
-            <image>https://via.placeholder.com/300x200</image>
-            <description>High-quality wireless headphones with noise cancellation.</description>
-            <button action="buy">Buy Now</button>
-        </product>
-    </productCard>
+    /* Responsive Sidebar */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        min-height: auto;
+      }
+    }
 
-    <blogLayout>
-        <blogPost>
-            <title>Getting Started with Web Development</title>
-            <content>Learn the basics of HTML, CSS, and JavaScript to start building websites.</content>
-        </blogPost>
-        <blogPost>
-            <title>Understanding Flexbox</title>
-            <content>Flexbox makes responsive design much easier. Explore its properties.</content>
-        </blogPost>
-        <blogPost>
-            <title>Box Model Explained</title>
-            <content>The CSS box model is the foundation of layout design. Understand margin, padding, and border.</content>
-        </blogPost>
-    </blogLayout>
-</week3>
+    /* ===== Task 7: Product Card ===== */
+    .product-card {
+      width: 300px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin: 20px auto;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .product-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .product-card h3 {
+      margin: 10px 0;
+    }
+    .product-card p {
+      font-size: 14px;
+      color: #555;
+    }
+    .buy-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #27ae60;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .buy-btn:hover {
+      background: #219150;
+    }
+
+    /* Responsive Product Card */
+    @media (max-width: 480px) {
+      .product-card {
+        width: 100%;
+      }
+    }
+
+    /* ===== Task 8: Blog Layout (3-column Flexbox) ===== */
+    .blog-container {
+      display: flex;
+      gap: 20px;
+    }
+    .blog-post {
+      flex: 1;
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .blog-post h4 {
+      margin-bottom: 8px;
+    }
+    .blog-post p {
+      font-size: 14px;
+      line-height: 1.4;
+      color: #444;
+    }
+
+    /* Responsive Blog */
+    @media (max-width: 900px) {
+      .blog-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Task 6: Sidebar ===== -->
+  <section>
+    <h2>Sidebar Layout</h2>
+    <div class="container">
+      <div class="sidebar">
+        <h3>Menu</h3>
+        <ul>
+          <li>Home</li>
+          <li>Products</li>
+          <li>Services</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="content">
+        <p>This is the main content area. Resize the screen to see the responsive sidebar in action.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Task 7: Product Card ===== -->
+  <section>
+    <h2>Product Card</h2>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x200" alt="Product">
+      <h3>Wireless Headphones</h3>
+      <p>High-quality wireless headphones with noise cancellation.</p>
+      <a href="#" class="buy-btn">Buy Now</a>
+    </div>
+  </section>
+
+  <!-- ===== Task 8: Blog Layout ===== -->
+  <section>
+    <h2>Blog Layout</h2>
+    <div class="blog-container">
+      <div class="blog-post">
+        <h4>Getting Started with Web Development</h4>
+        <p>Learn the basics of HTML, CSS, and JavaScript to start building websites.</p>
+      </div>
+      <div class="blog-post">
+        <h4>Understanding Flexbox</h4>
+        <p>Flexbox makes responsive design much easier. Explore its properties.</p>
+      </div>
+      <div class="blog-post">
+        <h4>Box Model Explained</h4>
+        <p>The CSS box model is the foundation of layout design. Understand margin, padding, and border.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
