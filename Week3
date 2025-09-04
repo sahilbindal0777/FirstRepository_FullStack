@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<week3>
+    <sidebar>
+        <title>Menu</title>
+        <items>
+            <item>Home</item>
+            <item>Products</item>
+            <item>Services</item>
+            <item>Contact</item>
+        </items>
+    </sidebar>
+
+    <productCard>
+        <product>
+            <name>Wireless Headphones</name>
+            <image>https://via.placeholder.com/300x200</image>
+            <description>High-quality wireless headphones with noise cancellation.</description>
+            <button action="buy">Buy Now</button>
+        </product>
+    </productCard>
+
+    <blogLayout>
+        <blogPost>
+            <title>Getting Started with Web Development</title>
+            <content>Learn the basics of HTML, CSS, and JavaScript to start building websites.</content>
+        </blogPost>
+        <blogPost>
+            <title>Understanding Flexbox</title>
+            <content>Flexbox makes responsive design much easier. Explore its properties.</content>
+        </blogPost>
+        <blogPost>
+            <title>Box Model Explained</title>
+            <content>The CSS box model is the foundation of layout design. Understand margin, padding, and border.</content>
+        </blogPost>
+    </blogLayout>
+</week3>
